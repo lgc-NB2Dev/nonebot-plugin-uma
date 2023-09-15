@@ -38,7 +38,7 @@ _✨ [赛马娘 QQ 机器人插件](https://github.com/azmiao/uma_plugin/) NoneB
 
 ## 📖 介绍
 
-这个插件是将在 hoshino bot 上安装的赛马娘攻略 nonebot
+本插件是移植自 HoshinoBot 插件 [azmiao/uma_plugin](https://github.com/azmiao/uma_plugin/) 的赛马娘攻略插件
 
 ## 💿 安装
 
