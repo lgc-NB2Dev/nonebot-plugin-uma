@@ -44,6 +44,9 @@ _✨ [赛马娘 QQ 机器人插件](https://github.com/azmiao/uma_plugin/) NoneB
 
 以下提到的方法 任选**其一** 即可
 
+_插件处于开发阶段中，暂未上架 NB 商店，所以请使用包管理器安装_
+
+<!--
 <details open>
 <summary>[推荐] 使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
@@ -51,14 +54,15 @@ _✨ [赛马娘 QQ 机器人插件](https://github.com/azmiao/uma_plugin/) NoneB
 ```bash
 nb plugin install nonebot-plugin-uma
 ```
+-->
 
 </details>
 
-<details>
+<details open>
 <summary>使用包管理器安装</summary>
 在 nonebot2 项目的插件目录下, 打开命令行, 根据你使用的包管理器, 输入相应的安装命令
 
-<details>
+<details open>
 <summary>pip</summary>
 
 ```bash
