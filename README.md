@@ -3,7 +3,7 @@
 <div align="center">
 
 <a href="https://v2.nonebot.dev/store">
-  <img src="https://raw.githubusercontent.com/A-kirami/nonebot-plugin-template/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo">
+  <img src="https://raw.githubusercontent.com/lgc-NB2Dev/readme/main/uma/uma.png" width="180" height="180" alt="NoneBotPluginLogo">
 </a>
 
 <p>
@@ -12,50 +12,33 @@
 
 # UMA Plugin
 
-_✨ NoneBot 插件简单描述 ✨_
+_✨ [赛马娘 QQ 机器人插件](https://github.com/azmiao/uma_plugin/) NoneBot2 移植版 ✨_
 
 <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
 <a href="https://pdm.fming.dev">
   <img src="https://img.shields.io/badge/pdm-managed-blueviolet" alt="pdm-managed">
 </a>
-<a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/f4778875-45a4-4688-8e1b-b8c844440abb">
+<!-- <a href="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/f4778875-45a4-4688-8e1b-b8c844440abb">
   <img src="https://wakatime.com/badge/user/b61b0f9a-f40b-4c82-bc51-0a75c67bfccf/project/f4778875-45a4-4688-8e1b-b8c844440abb.svg" alt="wakatime">
-</a>
+</a> -->
 
 <br />
 
 <a href="./LICENSE">
-  <img src="https://img.shields.io/github/license/owner/nonebot-plugin-example.svg" alt="license">
+  <img src="https://img.shields.io/github/license/lgc-NB2Dev/nonebot-plugin-uma.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-example">
-  <img src="https://img.shields.io/pypi/v/nonebot-plugin-example.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-uma">
+  <img src="https://img.shields.io/pypi/v/nonebot-plugin-uma.svg" alt="pypi">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-example">
-  <img src="https://img.shields.io/pypi/dm/nonebot-plugin-example" alt="pypi download">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-uma">
+  <img src="https://img.shields.io/pypi/dm/nonebot-plugin-uma" alt="pypi download">
 </a>
 
 </div>
 
-这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
-
-模板库使用方法:
-
-1. 点击仓库中的 `Use this template` 按钮, 输入仓库名与描述, 点击 `Create repository from template` 创建仓库
-2. 全局替换 `owner` 为仓库所有者 ID;  
-   全局替换 `nonebot-plugin-example` 为插件名;  
-   全局替换 `nonebot_plugin_example` 为包名;  
-   修改 python 徽标中的版本为你插件的运行所需版本;  
-   替换 WakaTime 的徽标
-3. 修改 `README.md` 中的插件名和插件描述, 并在下方填充相应的内容
-4. 使用 `pdm` 安装工作区依赖
-   ```shell
-   pdm install
-   pdm install --group dev
-   ```
-
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+这个插件是将在 hoshino bot 上安装的赛马娘攻略 nonebot
 
 ## 💿 安装
 
@@ -66,7 +49,7 @@ _✨ NoneBot 插件简单描述 ✨_
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
 ```bash
-nb plugin install nonebot-plugin-example
+nb plugin install nonebot-plugin-uma
 ```
 
 </details>
@@ -79,7 +62,7 @@ nb plugin install nonebot-plugin-example
 <summary>pip</summary>
 
 ```bash
-pip install nonebot-plugin-example
+pip install nonebot-plugin-uma
 ```
 
 </details>
@@ -87,7 +70,7 @@ pip install nonebot-plugin-example
 <summary>pdm</summary>
 
 ```bash
-pdm add nonebot-plugin-example
+pdm add nonebot-plugin-uma
 ```
 
 </details>
@@ -95,7 +78,7 @@ pdm add nonebot-plugin-example
 <summary>poetry</summary>
 
 ```bash
-poetry add nonebot-plugin-example
+poetry add nonebot-plugin-uma
 ```
 
 </details>
@@ -103,7 +86,7 @@ poetry add nonebot-plugin-example
 <summary>conda</summary>
 
 ```bash
-conda install nonebot-plugin-example
+conda install nonebot-plugin-uma
 ```
 
 </details>
@@ -114,7 +97,7 @@ conda install nonebot-plugin-example
 [tool.nonebot]
 plugins = [
     # ...
-    "nonebot_plugin_example"
+    "nonebot_plugin_uma"
 ]
 ```
 
@@ -122,36 +105,40 @@ plugins = [
 
 ## ⚙️ 配置
 
-在 nonebot2 项目的`.env`文件中添加下表中的必填配置
-
-|  配置项  | 必填 | 默认值 |   说明   |
-| :------: | :--: | :----: | :------: |
-| 配置项 1 |  是  |   无   | 配置说明 |
-| 配置项 2 |  否  |   无   | 配置说明 |
+暂无
 
 ## 🎉 使用
 
-### 指令表
+现有指令列表：
 
-|  指令  | 权限 | 需要@ | 范围 |   说明   |
-| :----: | :--: | :---: | :--: | :------: |
-| 指令 1 | 主人 |  否   | 私聊 | 指令说明 |
-| 指令 2 | 群员 |  是   | 群聊 | 指令说明 |
+- `uma_skills` 模块：  
+  ![help](./nonebot_plugin_uma/uma_skills/res/uma_skills_help.png)
 
-### 效果图
-
-如果有效果图的话
+未来插件完善后将会对接 PicMenu，敬请期待
 
 ## 📞 联系
 
-QQ：3076823485  
-Telegram：[@lgc2333](https://t.me/lgc2333)  
-吹水群：[1105946125](https://jq.qq.com/?_wv=1027&k=Z3n1MpEp)  
-邮箱：<lgc2333@126.com>
+### \[策划 & 开发\] \[饼干的卑微仆人\] [黑纸折扇](https://github.com/Perseus037)
+
+- QQ: 1209228678
+
+### \[协助开发\] \[超级大饼干\] [student_2333](https://github.com/lgc2333)
+
+- QQ：3076823485
+- Telegram：[@lgc2333](https://t.me/lgc2333)
+- 吹水群：[1105946125](https://jq.qq.com/?_wv=1027&k=Z3n1MpEp)
+- 邮箱：<lgc2333@126.com>
 
 ## 💡 鸣谢
 
-如果有要鸣谢的人的话
+### [azmiao/uma_plugin](https://github.com/azmiao/uma_plugin/)
+
+- 原 Hoshino 插件仓库  
+  感谢原插件作者 [azmiao](https://github.com/azmiao)、[CYDXDianXian](https://github.com/CYDXDianXian)、[int-PP](https://github.com/int-PP)、[BossWangST](https://github.com/BossWangST) 的无私奉献！
+
+### 最后……
+
+- 感谢宇宙无敌爱慕织姬单推人，以及所有喜欢赛马娘的人
 
 ## 💰 赞助
 
@@ -167,4 +154,6 @@ Telegram：[@lgc2333](https://t.me/lgc2333)
 
 ## 📝 更新日志
 
-芝士刚刚发布的插件，还没有更新日志的说 qwq~
+### 0.1.0.dev1
+
+- 移植了原插件的 `uma_skills` 模块
