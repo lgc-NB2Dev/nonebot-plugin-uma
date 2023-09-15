@@ -1,11 +1,10 @@
-from io import BytesIO
 from typing import List, Tuple, Union
 
 from fuzzywuzzy import process
 from nonebot.adapters.onebot.v11 import MessageSegment
-from pil_utils import BuildImage, Text2Image
-from prettytable import PrettyTable
+from nonebot_plugin_htmlrender import md_to_pic
 
+from ..utils import md_escape
 from .data_source import SkillConfigDict, SkillInfoDict
 
 
@@ -67,41 +66,39 @@ SkillInfoType = List[Tuple[str, SkillInfoDict]]
 
 
 # 生成图片
-def create_img(title: str, info_data: SkillInfoType) -> BytesIO:
+async def create_img(title: str, info_data: SkillInfoType) -> bytes:
     if not info_data:
         raise ValueError("info_data is empty")
 
-    field_names = info_data[0][1].keys()
-    table = PrettyTable(field_names=field_names, title=title)
+    table_head = ["技能名", *list(info_data[0][1].keys())]
+    table_rows = [
+        [
+            name,
+            trans["中文名"],
+            trans["稀有度"].replace("·", ""),
+            trans["颜色"],
+            trans["繁中译名"],
+            trans["条件限制"],
+            trans["技能数值"],
+            trans["持续时间"],
+            trans["评价分"],
+            trans["需要PT"],
+            trans["PT评价比"],
+            trans["触发条件"],
+            trans["技能类型"],
+        ]
+        for name, trans in info_data
+    ]
 
-    for name, trans in info_data:
-        table.add_row(
-            [
-                name,
-                trans["中文名"],
-                trans["稀有度"].replace("·", ""),
-                trans["颜色"],
-                trans["繁中译名"],
-                trans["条件限制"],
-                trans["技能数值"],
-                trans["持续时间"],
-                trans["评价分"],
-                trans["需要PT"],
-                trans["PT评价比"],
-                trans["触发条件"],
-                trans["技能类型"],
-            ],
-        )
-
-    space = 5
-    table_text = Text2Image.from_text(table.get_string(), 20)
-    bg = BuildImage.new(
-        "RGB",
-        (table_text.width + space * 2, table_text.height + space * 2),
-        (255, 255, 255),
+    title = md_escape(title)
+    table_head_md = f"|{'|'.join(table_head)}|"
+    table_align_md = f"|{'|'.join([':-:' for _ in table_head])}|"
+    table_rows_md = "\n".join(
+        [f"|{'|'.join([md_escape(i) for i in row])}|" for row in table_rows],
     )
-    table_text.draw_on_image(bg.image, (space, space))
-    return bg.save("jpg")
+    extra_html = "<style>.markdown-body { max-width: 100% !important; }</style>"
+    md = f"# {title}\n\n{table_head_md}\n{table_align_md}\n{table_rows_md}\n\n{extra_html}"
+    return await md_to_pic(md, width=1800, type="jpeg")
 
 
 # 获取马娘技能列表
@@ -161,4 +158,4 @@ async def get_skill_list(
             name_list.append(name)
     title = f"检索：{' + '.join(name_list)} 的结果"
 
-    return MessageSegment.image(create_img(title, infos))
+    return MessageSegment.image(await create_img(title, infos))

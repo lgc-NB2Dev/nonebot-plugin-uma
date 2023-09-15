@@ -4,19 +4,19 @@ authors = [
     { name = "Perseus037", email = "1209228678@qq.com" },
     { name = "student_2333", email = "lgc2333@126.com" },
 ]
-version = "0.1.0.dev1"
+version = "0.1.0.dev2"
 description = "A ported version of azmiao/uma_plugin for NoneBot2."
 dependencies = [
     "nonebot2>=2.1.0",
     "nonebot-adapter-onebot>=2.2.0",
     "nonebot-plugin-apscheduler>=0.3.0",
+    "nonebot-plugin-htmlrender>=0.2.2",
     "pydantic>=1.10.4,<2",
     "httpx>=0.25.0",
     "lxml>=4.9.3",
     "beautifulsoup4>=4.12.2",
     "pillow<10",
     "fuzzywuzzy>=0.18.0",
-    "prettytable>=3.9.0",
     "pil-utils>=0.1.8",
 ]
 requires-python = ">=3.8,<4.0"
