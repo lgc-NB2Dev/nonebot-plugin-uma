@@ -40,6 +40,9 @@ _✨ [赛马娘 QQ 机器人插件](https://github.com/azmiao/uma_plugin/) NoneB
 
 本插件是移植自 HoshinoBot 插件 [azmiao/uma_plugin](https://github.com/azmiao/uma_plugin/) 的赛马娘攻略插件
 
+最开始只是打算尝试着去做一个简单的移植（~~我以为很简单~~），看了一圈nonebot插件商店发现没有人做对应的移植就准备着手去做了，但是因为自己代码水平太烂
+插件体量又相对比较大，目前处于一个边学边写的状态，插件会继续慢慢移植。
+
 ## 💿 安装
 
 以下提到的方法 任选**其一** 即可
